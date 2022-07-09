@@ -1,6 +1,6 @@
 package dev.chirii.mycontacts
 
-data class contact(
+data class Contact(
     var name : String,
     var phoneNumber : String,
     var email : String,
