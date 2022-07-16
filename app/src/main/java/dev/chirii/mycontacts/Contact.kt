@@ -5,5 +5,5 @@ data class Contact(
     var phoneNumber : String,
     var email : String,
     var address: String,
-    var image : String
+    var image : String,
 )
