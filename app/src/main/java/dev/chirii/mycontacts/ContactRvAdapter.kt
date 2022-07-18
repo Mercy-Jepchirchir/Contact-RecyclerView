@@ -34,7 +34,7 @@ class ContactRvAdapter (var ContactList:List<Contact>):
             .resize(250,250)
             .placeholder(R.drawable.ic_baseline_person_24)
             .error(R.drawable.ic_baseline_error_outline_24)
-            .networkPolicy(NetworkPolicy.OFFLINE)
+            //.networkPolicy(NetworkPolicy.OFFLINE)
             .centerCrop()
             .into(holder.binding.imgContacts)
 
@@ -47,6 +47,9 @@ class ContactRvAdapter (var ContactList:List<Contact>):
             var intent = Intent(context, ViewContactActivity::class.java)
             intent.putExtra("NAME",currentContact.name)
             intent.putExtra("EMAIL",currentContact.email)
+            intent.putExtra("ADDRESS",currentContact.address)
+            intent.putExtra("PHONE NUMBER",currentContact.phoneNumber)
+            intent.putExtra("IMAGE",currentContact.image)
             context.startActivity(intent)
         }
     }
@@ -62,4 +65,4 @@ class ContactsViewHolder(var binding:ContactListItemBinding): RecyclerView.ViewH
 
 
 
-    }
+}
